@@ -4,22 +4,24 @@ import { motion } from "framer-motion";
 export function GoldOrb() {
   return (
     <div className="relative aspect-square w-full max-w-[560px] mx-auto">
-      {/* outer ring labels */}
+      {/* outer ring */}
       <motion.div
-        className="absolute inset-0 rounded-full border border-primary/20"
+        className="absolute inset-0 rounded-full border border-primary/25"
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       >
-        {["ANALYZE", "AUTOMATE", "OPTIMIZE", "DEPLOY"].map((label, i) => (
+        {/* four dot markers around the ring */}
+        {[0, 90, 180, 270].map((deg) => (
           <span
-            key={label}
-            className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 text-[10px] tracking-[0.4em] text-primary/80 font-medium"
-            style={{ transform: `rotate(${i * 90}deg) translateY(-50%)`, transformOrigin: "center 50vh" }}
-          >
-            <span style={{ display: "inline-block", transform: `rotate(${-i * 90}deg) translateY(-12px)` }}>{label}</span>
-          </span>
+            key={deg}
+            className="absolute left-1/2 top-0 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_10px_oklch(0.78_0.13_85/0.8)]"
+            style={{ transform: `rotate(${deg}deg) translateY(-50%)`, transformOrigin: "50% 50vh" }}
+          />
         ))}
       </motion.div>
+      {/* tag chips */}
+      <div className="absolute -top-2 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.35em] text-primary/70">ANALYZE</div>
+      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.35em] text-primary/70">OPTIMIZE</div>
 
       <motion.div
         className="absolute inset-6 rounded-full border border-primary/15"
