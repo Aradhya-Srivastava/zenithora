@@ -26,9 +26,9 @@ export const Route = createFileRoute("/")({
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" },
-  transition: { duration: 0.6, ease: "easeOut" },
-};
+  viewport: { once: true, margin: "-80px" as const },
+  transition: { duration: 0.6, ease: "easeOut" as const },
+} as const;
 
 const solutions = [
   { icon: Bot, title: "AI Chat Assistants", desc: "Provide instant customer support and lead qualification." },
