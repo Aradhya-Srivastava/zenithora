@@ -573,7 +573,7 @@ function Contact() {
         <div className="lg:col-span-2 space-y-5">
           <BentoCard className="p-6">
             <div className="text-xs uppercase tracking-[0.22em] text-primary">Email</div>
-            <div className="mt-2 font-medium text-lg">hello@zenithore.ai</div>
+            <a href="mailto:zenithora0@gmail.com" className="mt-2 block font-medium text-lg hover:text-primary transition">zenithora0@gmail.com</a>
           </BentoCard>
           <BentoCard className="p-6">
             <div className="text-xs uppercase tracking-[0.22em] text-primary">Strategy Call</div>
