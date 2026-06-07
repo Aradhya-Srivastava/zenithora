@@ -65,26 +65,26 @@
 
 :root {
   --radius: 0.875rem;
-  /* Zenithore dark luxury theme */
-  --background: oklch(0.13 0.04 268);          /* #050816 */
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.18 0.045 268);                /* #0D1326 */
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.18 0.045 268);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.68 0.18 262);              /* #4F8CFF */
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.63 0.22 290);            /* #7A5CFF */
-  --secondary-foreground: oklch(0.99 0 0);
-  --muted: oklch(0.22 0.04 268);
-  --muted-foreground: oklch(0.78 0.02 260);
-  --accent: oklch(0.63 0.22 290);
-  --accent-foreground: oklch(0.99 0 0);
+  /* Zenithore — Noir & Gold */
+  --background: oklch(0.14 0.005 60);           /* near-black #0d0d0d */
+  --foreground: oklch(0.97 0.01 90);
+  --card: oklch(0.18 0.005 60);                  /* #1a1a1a */
+  --card-foreground: oklch(0.97 0.01 90);
+  --popover: oklch(0.18 0.005 60);
+  --popover-foreground: oklch(0.97 0.01 90);
+  --primary: oklch(0.78 0.13 85);                /* gold #c9a84c */
+  --primary-foreground: oklch(0.14 0.005 60);
+  --secondary: oklch(0.9 0.1 88);                /* light gold #f0d78c */
+  --secondary-foreground: oklch(0.14 0.005 60);
+  --muted: oklch(0.22 0.004 60);
+  --muted-foreground: oklch(0.72 0.015 80);
+  --accent: oklch(0.9 0.1 88);
+  --accent-foreground: oklch(0.14 0.005 60);
   --destructive: oklch(0.62 0.24 27);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.68 0.18 262);
+  --border: oklch(0.9 0.05 88 / 12%);
+  --input: oklch(0.9 0.05 88 / 14%);
+  --ring: oklch(0.78 0.13 85);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -99,10 +99,15 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.68 0.18 262);
 
-  --gradient-primary: linear-gradient(135deg, oklch(0.68 0.18 262), oklch(0.63 0.22 290));
-  --gradient-radial: radial-gradient(circle at 50% 0%, oklch(0.68 0.18 262 / 0.25), transparent 60%);
-  --shadow-glow: 0 0 60px -10px oklch(0.68 0.18 262 / 0.5);
-  --shadow-card: 0 10px 40px -10px oklch(0 0 0 / 0.6);
+  --gradient-primary: linear-gradient(135deg, oklch(0.78 0.13 85), oklch(0.9 0.1 88) 60%, oklch(0.7 0.14 70));
+  --gradient-gold-soft: linear-gradient(135deg, oklch(0.78 0.13 85 / 0.3), oklch(0.9 0.1 88 / 0.15));
+  --gradient-radial: radial-gradient(circle at 50% 0%, oklch(0.78 0.13 85 / 0.22), transparent 60%);
+  --gradient-mesh: radial-gradient(at 20% 20%, oklch(0.78 0.13 85 / 0.18) 0px, transparent 50%),
+                   radial-gradient(at 80% 30%, oklch(0.9 0.1 88 / 0.12) 0px, transparent 50%),
+                   radial-gradient(at 50% 90%, oklch(0.7 0.14 70 / 0.16) 0px, transparent 55%);
+  --shadow-glow: 0 0 80px -10px oklch(0.78 0.13 85 / 0.45);
+  --shadow-card: 0 30px 80px -30px oklch(0 0 0 / 0.8);
+  --noise: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9  0 0 0 0 0.8  0 0 0 0 0.5  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
 .dark {
@@ -174,6 +179,28 @@
   background-image: var(--gradient-primary);
 }
 
+@utility bg-mesh {
+  background-image: var(--gradient-mesh);
+}
+
+@utility noise-overlay {
+  position: relative;
+}
+@utility noise-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--noise);
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+@utility gold-divider {
+  background: linear-gradient(90deg, transparent, oklch(0.78 0.13 85 / 0.6), transparent);
+  height: 1px;
+}
+
 @keyframes float-slow {
   0%, 100% { transform: translateY(0) translateX(0); }
   50% { transform: translateY(-30px) translateX(10px); }
@@ -189,6 +216,18 @@
 @keyframes spin-slow {
   to { transform: rotate(360deg); }
 }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes mesh-drift {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50% { transform: translate3d(2%, -1%, 0) scale(1.08); }
+}
 
 @utility animate-float {
   animation: float-slow 8s ease-in-out infinite;
@@ -198,4 +237,15 @@
 }
 @utility animate-spin-slow {
   animation: spin-slow 30s linear infinite;
+}
+@utility animate-shimmer {
+  background: linear-gradient(110deg, transparent 30%, oklch(0.9 0.1 88 / 0.25) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: shimmer 2.4s linear infinite;
+}
+@utility animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+@utility animate-mesh {
+  animation: mesh-drift 18s ease-in-out infinite;
 }
