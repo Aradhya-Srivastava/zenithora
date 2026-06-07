@@ -183,19 +183,6 @@
   background-image: var(--gradient-mesh);
 }
 
-@utility noise-overlay {
-  position: relative;
-}
-@utility noise-overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--noise);
-  opacity: 0.4;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-}
-
 @utility gold-divider {
   background: linear-gradient(90deg, transparent, oklch(0.78 0.13 85 / 0.6), transparent);
   height: 1px;
