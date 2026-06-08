@@ -11,6 +11,7 @@ import { GoldOrb } from "@/components/zenithore/GoldOrb";
 import { Section } from "@/components/zenithore/Section";
 import { Counter } from "@/components/zenithore/Counter";
 import { ContactForm } from "@/components/zenithore/ContactForm";
+import { CalendlyEmbed } from "@/components/zenithore/CalendlyEmbed";
 import { BentoCard } from "@/components/zenithore/BentoCard";
 import { Marquee } from "@/components/zenithore/Marquee";
 
