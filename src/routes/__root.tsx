@@ -81,10 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Zenithore builds AI systems that help businesses work smarter, respond faster, and grow efficiently." },
       { name: "author", content: "Zenithore" },
       { property: "og:title", content: "Zenithore — AI Automation Agency" },
-      { property: "og:description", content: "Premium AI automation for modern businesses. Chat assistants, voice agents, lead qualification, and more." },
+      { property: "og:description", content: "Zenithore builds AI systems that help businesses work smarter, respond faster, and grow efficiently." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Zenithore" },
+      { name: "twitter:title", content: "Zenithore — AI Automation Agency" },
+      { name: "twitter:description", content: "Zenithore builds AI systems that help businesses work smarter, respond faster, and grow efficiently." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/dc6fbc60-dc35-4fd7-826c-1c52b6ade41c" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/dc6fbc60-dc35-4fd7-826c-1c52b6ade41c" },
     ],
     links: [
       {
