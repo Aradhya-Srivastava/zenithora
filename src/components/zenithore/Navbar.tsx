@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Sparkles } from "lucide-react";
+import logo from "@/assets/zenithore-logo.png.asset.json";
 
 const links = [
   { label: "Home", href: "#home" },
