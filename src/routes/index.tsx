@@ -568,7 +568,7 @@ function Contact() {
       id="contact"
       eyebrow="Contact"
       title={<>Let's design your <span className="text-gradient">AI roadmap.</span></>}
-      subtitle="Tell us about your business. We'll respond within one business day."
+      subtitle="Book a free strategy call. We'll review your workflows and identify the highest-ROI places to deploy AI first."
     >
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 space-y-5">
@@ -589,7 +589,7 @@ function Contact() {
           </BentoCard>
         </div>
         <div className="lg:col-span-3">
-          <ContactForm />
+          <CalendlyEmbed />
         </div>
       </div>
     </Section>
