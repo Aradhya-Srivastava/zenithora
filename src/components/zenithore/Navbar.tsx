@@ -33,9 +33,7 @@ export function Navbar() {
     >
       <nav className="mx-auto max-w-7xl px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-2 group">
-          <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-primary shadow-glow">
-            <Sparkles className="h-4 w-4 text-white" />
-          </span>
+          <img src={logo.url} alt="Zenithore" className="h-9 w-9 object-contain" />
           <span className="font-display text-lg font-semibold tracking-tight">Zenithore</span>
         </a>
 
