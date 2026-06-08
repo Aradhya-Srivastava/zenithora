@@ -14,6 +14,7 @@ import { ContactForm } from "@/components/zenithore/ContactForm";
 import { CalendlyEmbed } from "@/components/zenithore/CalendlyEmbed";
 import { BentoCard } from "@/components/zenithore/BentoCard";
 import { Marquee } from "@/components/zenithore/Marquee";
+import zenithoreLogo from "@/assets/zenithore-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -602,9 +603,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
         <div className="lg:col-span-2">
           <a href="#home" className="flex items-center gap-2">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-primary shadow-glow">
-              <Sparkles className="h-4 w-4 text-primary-foreground" />
-            </span>
+            <img src={zenithoreLogo.url} alt="Zenithore" className="h-9 w-9 object-contain" />
             <span className="font-display text-lg font-semibold">Zenithore</span>
           </a>
           <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
