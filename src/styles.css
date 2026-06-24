@@ -236,3 +236,7 @@
 @utility animate-mesh {
   animation: mesh-drift 18s ease-in-out infinite;
 }
+
+#Lovable-Badge {
+  display: none !important;
+}
