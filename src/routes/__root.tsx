@@ -87,8 +87,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Zenithore" },
       { name: "twitter:title", content: "Zenithore — AI Automation Agency" },
       { name: "twitter:description", content: "Zenithore builds AI systems that help businesses work smarter, respond faster, and grow efficiently." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/dc6fbc60-dc35-4fd7-826c-1c52b6ade41c" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/dc6fbc60-dc35-4fd7-826c-1c52b6ade41c" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9cf008d8-1f1a-4426-a8e6-57fc1ac3e89e" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9cf008d8-1f1a-4426-a8e6-57fc1ac3e89e" },
     ],
     links: [
       {
